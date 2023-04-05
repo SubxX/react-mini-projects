@@ -1,9 +1,9 @@
 // @filename: models.ts
 import { Models } from "@rematch/core"
-import { count } from "./count.model"
+import { products } from "./products.model"
 
 export interface RootModel extends Models<RootModel> {
-    count: typeof count
+    products: typeof products
 }
 
-export const models: RootModel = { count }
+export const models: RootModel = { products }

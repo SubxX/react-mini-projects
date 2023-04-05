@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-bg {
+  @apply bg-white bg-opacity-10 border-white border-opacity-10;
+}
+
+.btn {
+  @apply custom-bg border backdrop-blur-xl px-5 py-2 rounded-full transition-colors hover:bg-opacity-5;
+}
+.icon-btn {
+  @apply custom-bg border backdrop-blur-xl p-3 rounded-full transition-colors hover:bg-opacity-5;
+}
+
+.card {
+  @apply custom-bg border rounded-xl p-4 flex flex-col space-y-4 transition-colors hover:bg-opacity-5;
+}
