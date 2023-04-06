@@ -11,14 +11,14 @@ const SidebarCart = ({ onClose }: Props) => {
   const total = useMemo(
     () =>
       cartItems.reduce((acc, product) => {
-        acc += product.quantity * product.price;
+        acc += product.qty * product.price;
         return acc;
       }, 0) as number,
     [cartItems]
   );
 
   return (
-    <div className="w-[350px] bg-gray-900 fixed right-0 top-0 h-screen backdrop-blur-xl z-20 custom-border !border-y-0 !border-r-0 overflow-y-auto flex flex-col">
+    <div className="w-full sm:w-[350px] bg-gray-900 fixed right-0 top-0 h-screen backdrop-blur-xl z-20 custom-border !border-y-0 !border-r-0 overflow-y-auto flex flex-col">
       <div className="flex items-center justify-between border-b custom-border px-4 h-[65px] !border-x-0 !border-t-0 sticky top-0 left-0 bg-gray-900 z-10">
         <h4 className="text-xl font-medium">My cart</h4>
         <button

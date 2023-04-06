@@ -20,11 +20,11 @@ export const cart = createModel<RootModel>()({
             return formatState(payload)
         },
         add(state, payload: any[]) {
-            const newCart = [...state.items, { ...payload, quantity: 1 }]
+            const newCart = [...state.items, { ...payload, qty: 1 }]
             return formatState(newCart)
         },
-        updateProductQuantity(state, { id, quantity }: { id: string; quantity: number }) {
-            const newCart = state.items.map((item) => item.id !== id ? item : ({ ...item, quantity }))
+        updateProductQuantity(state, { id, qty }: { id: string; qty: number }) {
+            const newCart = state.items.map((item) => item.id !== id ? item : ({ ...item, qty }))
             return formatState(newCart)
         },
         remove(state, productId: string) {

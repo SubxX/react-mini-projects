@@ -3,21 +3,21 @@ import { useAppDispatch, useAppSelector } from "@/store/store";
 
 const CartItem = ({ product }: any) => {
   const dispatch = useAppDispatch();
-  const quantity = product.quantity as number;
+  const qty = product.qty as number;
 
   const increment = () =>
     dispatch.cart.updateProductQuantity({
       id: product.id,
-      quantity: quantity + 1,
+      qty: qty + 1,
     });
   const decrement = () => {
-    if (quantity === 1) {
+    if (qty === 1) {
       dispatch.cart.remove(product.id);
       return;
     }
     dispatch.cart.updateProductQuantity({
       id: product.id,
-      quantity: quantity - 1,
+      qty: qty - 1,
     });
   };
 
@@ -30,7 +30,7 @@ const CartItem = ({ product }: any) => {
           <button className="icon-btn !p-1.5" onClick={decrement}>
             <AiOutlineMinus size={12} />
           </button>
-          <span>{product.quantity}</span>
+          <span>{product.qty}</span>
           <button className="icon-btn !p-1.5" onClick={increment}>
             <AiOutlinePlus size={12} />
           </button>
