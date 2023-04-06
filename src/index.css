@@ -3,16 +3,45 @@
 @tailwind utilities;
 
 .custom-bg {
-  @apply bg-white bg-opacity-10 border-white border-opacity-10;
+  @apply bg-white bg-opacity-10;
+}
+.success-bg {
+  @apply bg-green-500 bg-opacity-10;
+}
+.danger-bg {
+  @apply bg-red-500 bg-opacity-10;
+}
+.text-danger {
+  @apply text-red-500;
+}
+.text-success {
+  @apply text-green-500;
+}
+.custom-border {
+  @apply border border-white border-opacity-10;
 }
 
-.btn {
-  @apply custom-bg border backdrop-blur-xl px-5 py-2 rounded-full transition-colors hover:bg-opacity-5;
-}
+.btn,
 .icon-btn {
-  @apply custom-bg border backdrop-blur-xl p-3 rounded-full transition-colors hover:bg-opacity-5;
+  @apply custom-border backdrop-blur-xl rounded-full disabled:cursor-not-allowed transition-colors px-5 py-2;
+}
+
+.icon-btn {
+  @apply p-3;
+}
+
+.btn-default {
+  @apply custom-bg hover:enabled:bg-opacity-5;
+}
+
+.btn-success {
+  @apply success-bg hover:enabled:bg-opacity-5 text-success;
+}
+
+.btn-danger {
+  @apply danger-bg hover:enabled:bg-opacity-5 text-danger;
 }
 
 .card {
-  @apply custom-bg border rounded-xl p-4 flex flex-col space-y-4 transition-colors hover:bg-opacity-5;
+  @apply custom-bg custom-border rounded-xl p-4 flex flex-col space-y-4 transition-colors hover:bg-opacity-5;
 }

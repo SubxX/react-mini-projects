@@ -1,4 +1,4 @@
-import { BsFillCartPlusFill } from "react-icons/bs";
+import AddToCartButton from "./AddToCartButton";
 
 type Props = {
   product: any;
@@ -15,16 +15,14 @@ const ProductCard = ({ product }: Props) => {
         />
       </div>
       <div className="flex-1">
-        <p className="text-lg font-bold">{product.title}</p>
-        <span className="mt-2 text-gray-400 line-clamp-3">
+        <p className="font-bold">{product.title}</p>
+        <span className="mt-2 text-gray-400 line-clamp-3 text-sm">
           {product.description}
         </span>
       </div>
       <div className="flex items-center justify-between">
         <span className="font-bold text-xl">${product.price}</span>
-        <button className="icon-btn" aria-label="Add to cart">
-          <BsFillCartPlusFill />
-        </button>
+        <AddToCartButton product={product} />
       </div>
     </div>
   );
