@@ -1,6 +1,6 @@
 import { SiRedux } from "react-icons/si";
 import { BsFillCartFill } from "react-icons/bs";
-import SidebarCart from "@/components/SidebarCart";
+import SidebarCart from "./SidebarCart";
 import { useState } from "react";
 
 const Header = () => {

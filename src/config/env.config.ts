@@ -1,4 +1,2 @@
-const envConfig = {
-    baseApiUrl: 'https://fakestoreapi.com'
-}
+const envConfig = {}
 export default envConfig

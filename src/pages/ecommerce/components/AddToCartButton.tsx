@@ -1,10 +1,6 @@
-import { useAppDispatch, useAppSelector } from "@/store/store";
-import { useCallback, useMemo } from "react";
-import {
-  BsFillCartPlusFill,
-  BsFillCartCheckFill,
-  BsFillCartDashFill,
-} from "react-icons/bs";
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { useCallback } from "react";
+import { BsFillCartPlusFill, BsFillCartDashFill } from "react-icons/bs";
 
 type Props = {
   product: any;

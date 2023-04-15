@@ -32,6 +32,14 @@ export const cart = createModel<RootModel>()({
             return formatState(newCart)
         },
     },
+    selectors: (slice) => ({
+        total() {
+            return slice((cart) => cart.items.reduce((acc, product) => {
+                acc += product.qty * product.price;
+                return acc;
+            }, 0) as number);
+        },
+    }),
     // dispatch
     effects: () => ({
 

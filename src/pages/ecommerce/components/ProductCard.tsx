@@ -9,9 +9,9 @@ const ProductCard = ({ product }: Props) => {
     <div className="card">
       <div className="w-full h-40 bg-white rounded-xl p-2">
         <img
-          src={product.image}
+          src={product.thumbnail}
           className="w-full h-full object-contain"
-          alt={product.image}
+          alt={product.title}
         />
       </div>
       <div className="flex-1">

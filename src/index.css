@@ -45,3 +45,7 @@
 .card {
   @apply custom-bg custom-border rounded-xl p-4 flex flex-col space-y-4 transition-colors hover:bg-opacity-5;
 }
+
+/* .parent:hover .child:not(:hover) {
+  opacity: 0.75;
+} */

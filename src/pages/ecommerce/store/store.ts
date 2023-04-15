@@ -1,9 +1,14 @@
+import selectPlugin from "@rematch/select";
 import { init, RematchDispatch, RematchRootState } from '@rematch/core'
 import { models, RootModel } from './models'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
-const store = init({
+
+const store = init<RootModel>({
     models,
+    plugins: [
+        selectPlugin()
+    ]
 })
 
 export type Store = typeof store

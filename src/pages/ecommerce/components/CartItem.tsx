@@ -1,5 +1,5 @@
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { useAppDispatch, useAppSelector } from "@/store/store";
+import { useAppDispatch } from "../store/store";
 
 const CartItem = ({ product }: any) => {
   const dispatch = useAppDispatch();
